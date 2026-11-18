@@ -221,3 +221,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Project-specific: never commit secrets ---
+docker/.env
+LocalSettings.php
+**/LocalSettings.php
+secrets/
+*.botpassword
+
+# Raw API downloads (regenerable); the cleaned snapshot in data/ is committed
+data/raw/

@@ -1,0 +1,79 @@
+<noinclude>
+Stores and displays one OpenAlex subfield and lists its topics. Written by the upload bot
+between the <code>BOT:BEGIN openalex</code> and <code>BOT:END openalex</code> markers.
+
+{{#cargo_declare:_table=Subfields
+|openalex_id=String
+|name=String
+|description=Text
+|field=Page
+|field_id=String
+|domain=Page
+|domain_id=String
+|works_share=Float
+|citations_share=Float
+|works_permille=Float
+|works_count=Integer
+|cited_by_count=Integer
+|wikipedia=URL
+|wikidata=String
+}}
+</noinclude><includeonly>{{#cargo_store:_table=Subfields
+|openalex_id={{{openalex_id|}}}
+|name={{{name|}}}
+|description={{{description|}}}
+|field={{{field|}}}
+|field_id={{{field_id|}}}
+|domain={{{domain|}}}
+|domain_id={{{domain_id|}}}
+|works_share={{{works_share|}}}
+|citations_share={{{citations_share|}}}
+|works_permille={{{works_permille|}}}
+|works_count={{{works_count|}}}
+|cited_by_count={{{cited_by_count|}}}
+|wikipedia={{{wikipedia|}}}
+|wikidata={{{wikidata|}}}
+}}<div style="font-size:90%; margin-bottom:0.5em;">[[{{{domain}}}]] › [[{{{field}}}]] › '''{{{name}}}'''</div>
+{| class="wikitable" style="float:right; clear:right; margin:0 0 1em 1em; width:22em;"
+! colspan="2" style="font-size:110%;" | {{{name}}}
+|-
+! Level
+| Subfield
+|-
+! OpenAlex
+| [https://openalex.org/subfields/{{{openalex_id}}} {{{openalex_id}}}]
+|-
+! Domain
+| [[{{{domain}}}]]
+|-
+! Field
+| [[{{{field}}}]]
+|-
+! Share of works
+| {{{works_share|0}}} % of [[{{{field}}}]]
+|-
+! Share of citations
+| {{{citations_share|0}}} % of [[{{{field}}}]]
+|-
+! Share of all works
+| {{{works_permille|0}}} ‰
+{{#if:{{{wikipedia|}}}|
+{{!}}-
+! Wikipedia
+{{!}} [{{{wikipedia}}} Article]
+}}
+|}
+{{{description|}}}
+
+== Topics ==
+{{#cargo_query:tables=Topics
+|fields=_pageName=Topic,works_share=Share of works (%),citations_share=Share of citations (%)
+|where=subfield_id='{{{openalex_id}}}'
+|order by=works_share DESC
+|format=table
+|limit=1000
+|default=''No topics stored yet.''
+}}
+
+''Source: [https://openalex.org OpenAlex] (CC0).''
+[[Category:Subfields]]</includeonly>

@@ -1,0 +1,79 @@
+<noinclude>
+Stores and displays one OpenAlex topic. The call to this template is written by the upload bot
+between the <code>BOT:BEGIN openalex</code> and <code>BOT:END openalex</code> markers; edits there are overwritten.
+Everything outside the markers belongs to the curators.
+
+{{#cargo_declare:_table=Topics
+|openalex_id=String
+|name=String
+|description=Text
+|keywords=List (;) of String
+|subfield=Page
+|subfield_id=String
+|field=Page
+|field_id=String
+|domain=Page
+|domain_id=String
+|works_share=Float
+|citations_share=Float
+|works_permille=Float
+|works_count=Integer
+|cited_by_count=Integer
+|wikipedia=URL
+}}
+</noinclude><includeonly>{{#cargo_store:_table=Topics
+|openalex_id={{{openalex_id|}}}
+|name={{{name|}}}
+|description={{{description|}}}
+|keywords={{{keywords|}}}
+|subfield={{{subfield|}}}
+|subfield_id={{{subfield_id|}}}
+|field={{{field|}}}
+|field_id={{{field_id|}}}
+|domain={{{domain|}}}
+|domain_id={{{domain_id|}}}
+|works_share={{{works_share|}}}
+|citations_share={{{citations_share|}}}
+|works_permille={{{works_permille|}}}
+|works_count={{{works_count|}}}
+|cited_by_count={{{cited_by_count|}}}
+|wikipedia={{{wikipedia|}}}
+}}<div style="font-size:90%; margin-bottom:0.5em;">[[{{{domain}}}]] › [[{{{field}}}]] › [[{{{subfield}}}]] › '''{{{name}}}'''</div>
+{| class="wikitable" style="float:right; clear:right; margin:0 0 1em 1em; width:22em;"
+! colspan="2" style="font-size:110%;" | {{{name}}}
+|-
+! Level
+| Topic
+|-
+! OpenAlex
+| [https://openalex.org/{{{openalex_id}}} {{{openalex_id}}}]
+|-
+! Domain
+| [[{{{domain}}}]]
+|-
+! Field
+| [[{{{field}}}]]
+|-
+! Subfield
+| [[{{{subfield}}}]]
+|-
+! Share of works
+| {{{works_share|0}}} % of [[{{{subfield}}}]]
+|-
+! Share of citations
+| {{{citations_share|0}}} % of [[{{{subfield}}}]]
+|-
+! Share of all works
+| {{{works_permille|0}}} ‰
+{{#if:{{{wikipedia|}}}|
+{{!}}-
+! Wikipedia
+{{!}} [{{{wikipedia}}} Article]
+}}
+|}
+{{{description|}}}
+
+'''Keywords:''' {{{keywords|}}}
+
+''Source: [https://openalex.org OpenAlex] (CC0). Review status: not yet reviewed by experts.''
+[[Category:Topics]]</includeonly>

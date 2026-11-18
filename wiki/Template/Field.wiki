@@ -1,0 +1,72 @@
+<noinclude>
+Stores and displays one OpenAlex field and lists its subfields. Written by the upload bot
+between the <code>BOT:BEGIN openalex</code> and <code>BOT:END openalex</code> markers.
+
+{{#cargo_declare:_table=Fields
+|openalex_id=String
+|name=String
+|description=Text
+|domain=Page
+|domain_id=String
+|works_share=Float
+|citations_share=Float
+|works_permille=Float
+|works_count=Integer
+|cited_by_count=Integer
+|wikipedia=URL
+|wikidata=String
+}}
+</noinclude><includeonly>{{#cargo_store:_table=Fields
+|openalex_id={{{openalex_id|}}}
+|name={{{name|}}}
+|description={{{description|}}}
+|domain={{{domain|}}}
+|domain_id={{{domain_id|}}}
+|works_share={{{works_share|}}}
+|citations_share={{{citations_share|}}}
+|works_permille={{{works_permille|}}}
+|works_count={{{works_count|}}}
+|cited_by_count={{{cited_by_count|}}}
+|wikipedia={{{wikipedia|}}}
+|wikidata={{{wikidata|}}}
+}}<div style="font-size:90%; margin-bottom:0.5em;">[[{{{domain}}}]] › '''{{{name}}}'''</div>
+{| class="wikitable" style="float:right; clear:right; margin:0 0 1em 1em; width:22em;"
+! colspan="2" style="font-size:110%;" | {{{name}}}
+|-
+! Level
+| Field
+|-
+! OpenAlex
+| [https://openalex.org/fields/{{{openalex_id}}} {{{openalex_id}}}]
+|-
+! Domain
+| [[{{{domain}}}]]
+|-
+! Share of works
+| {{{works_share|0}}} % of [[{{{domain}}}]]
+|-
+! Share of citations
+| {{{citations_share|0}}} % of [[{{{domain}}}]]
+|-
+! Share of all works
+| {{{works_permille|0}}} ‰
+{{#if:{{{wikipedia|}}}|
+{{!}}-
+! Wikipedia
+{{!}} [{{{wikipedia}}} Article]
+}}
+|}
+{{{description|}}}
+
+== Subfields ==
+{{#cargo_query:tables=Subfields
+|fields=_pageName=Subfield,works_share=Share of works (%),citations_share=Share of citations (%)
+|where=field_id='{{{openalex_id}}}'
+|order by=works_share DESC
+|format=table
+|limit=500
+|default=''No subfields stored yet.''
+}}
+
+''Source: [https://openalex.org OpenAlex] (CC0).''
+[[Category:Fields]]</includeonly>

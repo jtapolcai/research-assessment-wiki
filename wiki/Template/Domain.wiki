@@ -1,0 +1,62 @@
+<noinclude>
+Stores and displays one OpenAlex domain and lists its fields. Written by the upload bot
+between the <code>BOT:BEGIN openalex</code> and <code>BOT:END openalex</code> markers.
+
+{{#cargo_declare:_table=Domains
+|openalex_id=String
+|name=String
+|description=Text
+|works_share=Float
+|citations_share=Float
+|works_permille=Float
+|works_count=Integer
+|cited_by_count=Integer
+|wikipedia=URL
+|wikidata=String
+}}
+</noinclude><includeonly>{{#cargo_store:_table=Domains
+|openalex_id={{{openalex_id|}}}
+|name={{{name|}}}
+|description={{{description|}}}
+|works_share={{{works_share|}}}
+|citations_share={{{citations_share|}}}
+|works_permille={{{works_permille|}}}
+|works_count={{{works_count|}}}
+|cited_by_count={{{cited_by_count|}}}
+|wikipedia={{{wikipedia|}}}
+|wikidata={{{wikidata|}}}
+}}<div style="font-size:90%; margin-bottom:0.5em;">[[OpenAlex topic hierarchy]] › '''{{{name}}}'''</div>
+{| class="wikitable" style="float:right; clear:right; margin:0 0 1em 1em; width:22em;"
+! colspan="2" style="font-size:110%;" | {{{name}}}
+|-
+! Level
+| Domain
+|-
+! OpenAlex
+| [https://openalex.org/domains/{{{openalex_id}}} {{{openalex_id}}}]
+|-
+! Share of works
+| {{{works_share|0}}} % of all works
+|-
+! Share of citations
+| {{{citations_share|0}}} % of all citations
+{{#if:{{{wikipedia|}}}|
+{{!}}-
+! Wikipedia
+{{!}} [{{{wikipedia}}} Article]
+}}
+|}
+{{{description|}}}
+
+== Fields ==
+{{#cargo_query:tables=Fields
+|fields=_pageName=Field,works_share=Share of works (%),citations_share=Share of citations (%)
+|where=domain_id='{{{openalex_id}}}'
+|order by=works_share DESC
+|format=table
+|limit=100
+|default=''No fields stored yet.''
+}}
+
+''Source: [https://openalex.org OpenAlex] (CC0).''
+[[Category:Domains]]</includeonly>

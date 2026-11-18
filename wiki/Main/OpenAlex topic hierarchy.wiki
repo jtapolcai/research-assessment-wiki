@@ -1,0 +1,20 @@
+This wiki collects criteria for evaluating researchers in each topic of the
+[https://openalex.org OpenAlex] classification. The classification has four levels:
+'''domain → field → subfield → topic'''.
+
+''Pilot: the pages below contain only the OpenAlex data so far. Criteria (venues, awards,
+weights) will be added and reviewed by domain experts.''
+
+== Domains ==
+{{#cargo_query:tables=Domains
+|fields=_pageName=Domain,works_share=Share of works (%),citations_share=Share of citations (%)
+|order by=works_share DESC
+|format=table
+|default=''No domains stored yet.''
+}}
+
+== Size ==
+{{#cargo_query:tables=Topics
+|fields=COUNT(*)=Topics
+|format=table
+}}
