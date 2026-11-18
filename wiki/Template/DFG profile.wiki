@@ -1,0 +1,52 @@
+<noinclude>
+Displays the DFG publication-type profile of one review board. Called by a Cargo query
+(<code>format=template</code>, <code>named args=yes</code>) from [[Template:Subfield]] and [[Template:Topic]].
+</noinclude><includeonly>Closest DFG review board: '''{{{board}}}''' ({{{area}}}).
+{| class="wikitable"
+! Publication type !! Share in the field
+|-
+| Journal articles
+| {{DFG level|{{{journal|}}}}}
+|-
+| Monographs / books
+| {{DFG level|{{{mono|}}}}}
+|-
+| Contributions to edited volumes
+| {{DFG level|{{{anthology|}}}}}
+|-
+| Preprints
+| {{DFG level|{{{preprints|}}}}}
+|-
+| Non-publisher publications (e.g. conference proceedings, reports)
+| {{DFG level|{{{nonpub|}}}}}
+|-
+| Data publications
+| {{DFG level|{{{data|}}}}}
+|-
+| Software / code
+| {{DFG level|{{{software|}}}}}
+|-
+| Patents
+| {{DFG level|{{{patents|}}}}}
+|-
+| Audio-visual media
+| {{DFG level|{{{av|}}}}}
+|-
+| Images / graphs
+| {{DFG level|{{{images|}}}}}
+|-
+| Alternative publication types
+| {{DFG level|{{{alt|}}}}}
+|-
+| Other
+| {{DFG level|{{{other|}}}}}
+|}
+<small>Share of each publication type in the field, as estimated by the DFG Head Office for its
+review boards (survey of August 2018): 5 = very high (&gt;90 %), 4 = high (75–90 %),
+3 = medium (25–75 %), 2 = low (5–25 %), 1 = minimal (&lt;5 %). These are shares, not evaluation
+weights; they are a starting point for the weights to be agreed by experts.
+Source: Deutsche Forschungsgemeinschaft (2022), ''Academic Publishing as a Foundation and Area of
+Leverage for Research Assessment'', position paper, Appendix, Figure 3, p. 74
+([https://www.dfg.de/resource/blob/175776/positionspapier-publikationswesen-en.pdf PDF]).
+The assignment of DFG review boards to OpenAlex subfields is our own approximation; see
+[[DFG publication type survey (2018)]].</small></includeonly>

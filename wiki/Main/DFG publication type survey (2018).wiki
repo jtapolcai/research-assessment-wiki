@@ -1,0 +1,894 @@
+The [https://www.dfg.de DFG] (German Research Foundation) asked the Head Office staff of its
+48 review boards in August 2018 how common the various publication types are in their subject
+areas. The answers are shown in Figure 3 of the DFG position paper
+''Academic Publishing as a Foundation and Area of Leverage for Research Assessment'' (2022).
+We use them as a first, field-specific indication of which kinds of output matter in a field.
+
+'''Scale:''' share of the publication type in the field: 5 = very high (&gt;90 %), 4 = high (75–90 %),
+3 = medium (25–75 %), 2 = low (5–25 %), 1 = minimal (&lt;5 %), – = no response.
+These are '''shares, not evaluation weights'''.
+
+'''Mapping to OpenAlex:''' each OpenAlex subfield was assigned to the closest DFG review board
+(last column). This assignment is our own approximation and open to correction; the subfield and
+topic pages show the profile of the assigned board.
+
+'''Note:''' in the source figure the rows for ''Computer Science'' and ''Construction Engineering and
+Architecture'' are identical, which may be an error in the figure; the values are reproduced as
+published.
+
+== Survey results ==
+{| class="wikitable sortable" style="font-size:90%;"
+! DFG review board !! Monographs / books !! Contributions to edited volumes !! Journal articles !! Preprints !! Non-publisher publications !! Data publications !! Software / code !! Patents !! Audio-visual media !! Images / graphs !! Alternative types !! Other !! OpenAlex subfields
+{{DFG publication types
+|area=Humanities and Social Sciences
+|review_board=Ancient Cultures
+|monographs=4
+|anthology_contributions=4
+|journal_articles=4
+|preprints=1
+|non_publisher=2
+|data_publications=1
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=5
+|alternative=1
+|other=
+|subfield_ids=1204,1205,3302
+|subfields=[[Archeology (arts and humanities)]], [[Classics]], [[Archeology]]
+}}
+{{DFG publication types
+|area=Humanities and Social Sciences
+|review_board=History
+|monographs=5
+|anthology_contributions=5
+|journal_articles=5
+|preprints=1
+|non_publisher=2
+|data_publications=1
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=2
+|alternative=2
+|other=
+|subfield_ids=1200,1202
+|subfields=[[General Arts and Humanities]], [[History]]
+}}
+{{DFG publication types
+|area=Humanities and Social Sciences
+|review_board=Fine Arts, Music, Theatre and Media Studies
+|monographs=5
+|anthology_contributions=2
+|journal_articles=1
+|preprints=1
+|non_publisher=1
+|data_publications=1
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1206,1209,1210,1213
+|subfields=[[Conservation]], [[Museology]], [[Music]], [[Visual Arts and Performing Arts]]
+}}
+{{DFG publication types
+|area=Humanities and Social Sciences
+|review_board=Linguistics
+|monographs=3
+|anthology_contributions=3
+|journal_articles=4
+|preprints=2
+|non_publisher=4
+|data_publications=2
+|software=2
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1203,3310
+|subfields=[[Language and Linguistics]], [[Linguistics and Language]]
+}}
+{{DFG publication types
+|area=Humanities and Social Sciences
+|review_board=Literary Studies
+|monographs=3
+|anthology_contributions=3
+|journal_articles=3
+|preprints=1
+|non_publisher=1
+|data_publications=1
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1208
+|subfields=[[Literature and Literary Theory]]
+}}
+{{DFG publication types
+|area=Humanities and Social Sciences
+|review_board=Social and Cultural Anthropology, Non-European Cultures, Jewish Studies and Religious Studies
+|monographs=4
+|anthology_contributions=3
+|journal_articles=3
+|preprints=2
+|non_publisher=2
+|data_publications=1
+|software=1
+|patents=1
+|audio_visual=2
+|images_graphs=2
+|alternative=2
+|other=
+|subfield_ids=1212,3314,3316
+|subfields=[[Religious studies]], [[Anthropology]], [[Cultural Studies]]
+}}
+{{DFG publication types
+|area=Humanities and Social Sciences
+|review_board=Theology
+|monographs=5
+|anthology_contributions=4
+|journal_articles=3
+|preprints=1
+|non_publisher=2
+|data_publications=1
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=2
+|alternative=2
+|other=
+|subfield_ids=
+|subfields=–
+}}
+{{DFG publication types
+|area=Humanities and Social Sciences
+|review_board=Philosophy
+|monographs=3
+|anthology_contributions=3
+|journal_articles=3
+|preprints=2
+|non_publisher=2
+|data_publications=1
+|software=1
+|patents=1
+|audio_visual=
+|images_graphs=1
+|alternative=2
+|other=
+|subfield_ids=1207,1211
+|subfields=[[History and Philosophy of Science]], [[Philosophy]]
+}}
+{{DFG publication types
+|area=Humanities and Social Sciences
+|review_board=Educational Research
+|monographs=3
+|anthology_contributions=4
+|journal_articles=3
+|preprints=1
+|non_publisher=2
+|data_publications=2
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=3304
+|subfields=[[Education]]
+}}
+{{DFG publication types
+|area=Humanities and Social Sciences
+|review_board=Psychology
+|monographs=2
+|anthology_contributions=1
+|journal_articles=5
+|preprints=1
+|non_publisher=1
+|data_publications=1
+|software=2
+|patents=1
+|audio_visual=1
+|images_graphs=2
+|alternative=2
+|other=
+|subfield_ids=3200,3202,3203,3204,3205,3206,3207,3307
+|subfields=[[General Psychology]], [[Applied Psychology]], [[Clinical Psychology]], [[Developmental and Educational Psychology]], [[Experimental and Cognitive Psychology]], [[Neuropsychology and Physiological Psychology]], [[Social Psychology]], [[Human Factors and Ergonomics]]
+}}
+{{DFG publication types
+|area=Humanities and Social Sciences
+|review_board=Social Sciences
+|monographs=3
+|anthology_contributions=3
+|journal_articles=3
+|preprints=2
+|non_publisher=2
+|data_publications=2
+|software=2
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=2
+|other=
+|subfield_ids=3300,3303,3306,3309,3311,3312,3315,3317,3318,3319,3320,3321
+|subfields=[[General Social Sciences]], [[Development]], [[Health]], [[Library and Information Sciences]], [[Safety Research]], [[Sociology and Political Science]], [[Communication]], [[Demography]], [[Gender Studies]], [[Life-span and Life-course Studies]], [[Political Science and International Relations]], [[Public Administration]]
+}}
+{{DFG publication types
+|area=Humanities and Social Sciences
+|review_board=Economics
+|monographs=1
+|anthology_contributions=1
+|journal_articles=5
+|preprints=4
+|non_publisher=1
+|data_publications=2
+|software=2
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1402,1403,1404,1405,1406,1407,1408,1409,1410,1800,1802,1803,2000,2002,2003
+|subfields=[[Accounting]], [[Business and International Management]], [[Management Information Systems]], [[Management of Technology and Innovation]], [[Marketing]], [[Organizational Behavior and Human Resource Management]], [[Strategy and Management]], [[Tourism, Leisure and Hospitality Management]], [[Industrial relations]], [[General Decision Sciences]], [[Information Systems and Management]], [[Management Science and Operations Research]], [[General Economics, Econometrics and Finance]], [[Economics and Econometrics]], [[Finance]]
+}}
+{{DFG publication types
+|area=Humanities and Social Sciences
+|review_board=Jurisprudence
+|monographs=5
+|anthology_contributions=3
+|journal_articles=3
+|preprints=1
+|non_publisher=2
+|data_publications=1
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=2
+|alternative=2
+|other=
+|subfield_ids=3308
+|subfields=[[Law]]
+}}
+{{DFG publication types
+|area=Life Sciences
+|review_board=Basic Research in Biology and Medicine
+|monographs=1
+|anthology_contributions=1
+|journal_articles=5
+|preprints=2
+|non_publisher=3
+|data_publications=2
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1302,1303,1304,1305,1307,1309,1311,1312,1315,2704,3003
+|subfields=[[Aging]], [[Biochemistry]], [[Biophysics]], [[Biotechnology]], [[Cell Biology]], [[Developmental Biology]], [[Genetics]], [[Molecular Biology]], [[Structural Biology]], [[Biochemistry (medical)]], [[Pharmaceutical Science]]
+}}
+{{DFG publication types
+|area=Life Sciences
+|review_board=Plant Sciences
+|monographs=1
+|anthology_contributions=2
+|journal_articles=5
+|preprints=3
+|non_publisher=4
+|data_publications=3
+|software=2
+|patents=2
+|audio_visual=2
+|images_graphs=1
+|alternative=2
+|other=
+|subfield_ids=1110
+|subfields=[[Plant Science]]
+}}
+{{DFG publication types
+|area=Life Sciences
+|review_board=Zoology
+|monographs=1
+|anthology_contributions=1
+|journal_articles=5
+|preprints=2
+|non_publisher=2
+|data_publications=1
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1103,1104,1105,1109,2302,2303
+|subfields=[[Animal Science and Zoology]], [[Aquatic Science]], [[Ecology, Evolution, Behavior and Systematics]], [[Insect Science]], [[Ecological Modeling]], [[Ecology]]
+}}
+{{DFG publication types
+|area=Life Sciences
+|review_board=Microbiology, Virology and Immunology
+|monographs=1
+|anthology_contributions=2
+|journal_articles=5
+|preprints=3
+|non_publisher=4
+|data_publications=4
+|software=2
+|patents=2
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=2402,2403,2404,2405,2406,2726
+|subfields=[[Applied Microbiology and Biotechnology]], [[Immunology]], [[Microbiology]], [[Parasitology]], [[Virology]], [[Microbiology (medical)]]
+}}
+{{DFG publication types
+|area=Life Sciences
+|review_board=Medicine
+|monographs=1
+|anthology_contributions=1
+|journal_articles=4
+|preprints=1
+|non_publisher=3
+|data_publications=1
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=2
+|other=
+|subfield_ids=1306,1308,1310,1313,1314,2307,2702,2703,2705,2706,2707,2708,2711,2712,2713,2714,2715,2716,2717,2718,2720,2721,2723,2724,2725,2727,2729,2730,2731,2732,2733,2734,2735,2736,2737,2739,2740,2741,2742,2743,2745,2746,2747,2748,2910,2911,2916,2922,3004,3005,3500,3504,3505,3506,3600,3603,3604,3605,3607,3608,3609,3611,3612,3614,3616
+|subfields=[[Cancer Research]], [[Clinical Biochemistry]], [[Endocrinology]], [[Molecular Medicine]], [[Physiology]], [[Health, Toxicology and Mutagenesis]], [[Anatomy]], [[Anesthesiology and Pain Medicine]], [[Cardiology and Cardiovascular Medicine]], [[Critical Care and Intensive Care Medicine]], [[Complementary and alternative medicine]], [[Dermatology]], [[Emergency Medicine]], [[Endocrinology, Diabetes and Metabolism]], [[Epidemiology]], [[Family Practice]], [[Gastroenterology]], [[Genetics (clinical)]], [[Geriatrics and Gerontology]], [[Health Informatics]], [[Hematology]], [[Hepatology]], [[Immunology and Allergy]], [[Internal Medicine]], [[Infectious Diseases]], [[Nephrology]], [[Obstetrics and Gynecology]], [[Oncology]], [[Ophthalmology]], [[Orthopedics and Sports Medicine]], [[Otorhinolaryngology]], [[Pathology and Forensic Medicine]], [[Pediatrics, Perinatology and Child Health]], [[Pharmacology (medical)]], [[Physiology (medical)]], [[Public Health, Environmental and Occupational Health]], [[Pulmonary and Respiratory Medicine]], [[Radiology, Nuclear Medicine and Imaging]], [[Rehabilitation]], [[Reproductive Medicine]], [[Rheumatology]], [[Surgery]], [[Transplantation]], [[Urology]], [[Issues, ethics and legal aspects]], [[Leadership and Management]], [[Nutrition and Dietetics]], [[Research and Theory]], [[Pharmacology]], [[Toxicology]], [[General Dentistry]], [[Oral Surgery]], [[Orthodontics]], [[Periodontics]], [[General Health Professions]], [[Complementary and Manual Therapy]], [[Emergency Medical Services]], [[Health Information Management]], [[Medical Laboratory Technology]], [[Medical Terminology]], [[Occupational Therapy]], [[Pharmacy]], [[Physical Therapy, Sports Therapy and Rehabilitation]], [[Radiological and Ultrasound Technology]], [[Speech and Hearing]]
+}}
+{{DFG publication types
+|area=Life Sciences
+|review_board=Neurosciences
+|monographs=1
+|anthology_contributions=1
+|journal_articles=5
+|preprints=2
+|non_publisher=2
+|data_publications=2
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=2728,2738,2802,2803,2804,2805,2806,2807,2808,2809
+|subfields=[[Clinical Neurology]], [[Psychiatry and Mental health]], [[Behavioral Neuroscience]], [[Biological Psychiatry]], [[Cellular and Molecular Neuroscience]], [[Cognitive Neuroscience]], [[Developmental Neuroscience]], [[Endocrine and Autonomic Systems]], [[Neurology]], [[Sensory Systems]]
+}}
+{{DFG publication types
+|area=Life Sciences
+|review_board=Agriculture, Forestry and Veterinary Medicine
+|monographs=1
+|anthology_contributions=2
+|journal_articles=5
+|preprints=2
+|non_publisher=2
+|data_publications=3
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=2
+|other=
+|subfield_ids=1100,1102,1107,1108,1111,3402,3404
+|subfields=[[General Agricultural and Biological Sciences]], [[Agronomy and Crop Science]], [[Forestry]], [[Horticulture]], [[Soil Science]], [[Equine]], [[Small Animals]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Molecular Chemistry
+|monographs=2
+|anthology_contributions=2
+|journal_articles=5
+|preprints=2
+|non_publisher=2
+|data_publications=2
+|software=1
+|patents=2
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1604,1605,3002
+|subfields=[[Inorganic Chemistry]], [[Organic Chemistry]], [[Drug Discovery]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Chemical Solid State and Surface Research
+|monographs=2
+|anthology_contributions=2
+|journal_articles=5
+|preprints=2
+|non_publisher=2
+|data_publications=2
+|software=1
+|patents=2
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=2505
+|subfields=[[Materials Chemistry]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Physical and Theoretical Chemistry
+|monographs=1
+|anthology_contributions=2
+|journal_articles=5
+|preprints=2
+|non_publisher=1
+|data_publications=2
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1603,1606
+|subfields=[[Electrochemistry]], [[Physical and Theoretical Chemistry]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Analytical Chemistry, Method Development (Chemistry)
+|monographs=1
+|anthology_contributions=1
+|journal_articles=5
+|preprints=1
+|non_publisher=2
+|data_publications=1
+|software=1
+|patents=2
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1602,1607,2304
+|subfields=[[Analytical Chemistry]], [[Spectroscopy]], [[Environmental Chemistry]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Biological Chemistry and Food Chemistry
+|monographs=1
+|anthology_contributions=1
+|journal_articles=5
+|preprints=2
+|non_publisher=2
+|data_publications=1
+|software=1
+|patents=2
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1106
+|subfields=[[Food Science]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Polymer Research
+|monographs=2
+|anthology_contributions=2
+|journal_articles=5
+|preprints=2
+|non_publisher=2
+|data_publications=2
+|software=1
+|patents=3
+|audio_visual=1
+|images_graphs=2
+|alternative=1
+|other=
+|subfield_ids=2507
+|subfields=[[Polymers and Plastics]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Condensed Matter Physics
+|monographs=1
+|anthology_contributions=2
+|journal_articles=5
+|preprints=3
+|non_publisher=3
+|data_publications=2
+|software=2
+|patents=2
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=3104
+|subfields=[[Condensed Matter Physics]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Optics, Quantum Optics and Physics of Atoms, Molecules and Plasmas
+|monographs=1
+|anthology_contributions=2
+|journal_articles=5
+|preprints=4
+|non_publisher=2
+|data_publications=2
+|software=2
+|patents=2
+|audio_visual=1
+|images_graphs=1
+|alternative=2
+|other=1
+|subfield_ids=3107
+|subfields=[[Atomic and Molecular Physics, and Optics]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Particles, Nuclei and Fields
+|monographs=1
+|anthology_contributions=1
+|journal_articles=5
+|preprints=5
+|non_publisher=3
+|data_publications=3
+|software=3
+|patents=2
+|audio_visual=1
+|images_graphs=1
+|alternative=2
+|other=
+|subfield_ids=3106,3108
+|subfields=[[Nuclear and High Energy Physics]], [[Radiation]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Statistical Physics, Soft Matter, Biological Physics, Nonlinear Dynamics
+|monographs=1
+|anthology_contributions=2
+|journal_articles=5
+|preprints=3
+|non_publisher=3
+|data_publications=2
+|software=2
+|patents=2
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=3109
+|subfields=[[Statistical and Nonlinear Physics]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Astrophysics and Astronomy
+|monographs=1
+|anthology_contributions=1
+|journal_articles=5
+|preprints=4
+|non_publisher=2
+|data_publications=3
+|software=2
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1912,3103
+|subfields=[[Space and Planetary Science]], [[Astronomy and Astrophysics]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Mathematics
+|monographs=4
+|anthology_contributions=2
+|journal_articles=5
+|preprints=5
+|non_publisher=2
+|data_publications=2
+|software=2
+|patents=1
+|audio_visual=1
+|images_graphs=2
+|alternative=1
+|other=1
+|subfield_ids=1804,2602,2604,2605,2607,2608,2610,2611,2612,2613
+|subfields=[[Statistics, Probability and Uncertainty]], [[Algebra and Number Theory]], [[Applied Mathematics]], [[Computational Mathematics]], [[Discrete Mathematics and Combinatorics]], [[Geometry and Topology]], [[Mathematical Physics]], [[Modeling and Simulation]], [[Numerical Analysis]], [[Statistics and Probability]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Atmospheric Science, Oceanography and Climate Research
+|monographs=1
+|anthology_contributions=2
+|journal_articles=4
+|preprints=1
+|non_publisher=1
+|data_publications=2
+|software=2
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=1
+|subfield_ids=1902,1910,2306
+|subfields=[[Atmospheric Science]], [[Oceanography]], [[Global and Planetary Change]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Geology and Palaeontology
+|monographs=2
+|anthology_contributions=2
+|journal_articles=5
+|preprints=2
+|non_publisher=1
+|data_publications=1
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1907,1911
+|subfields=[[Geology]], [[Paleontology]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Geophysics and Geodesy
+|monographs=1
+|anthology_contributions=2
+|journal_articles=4
+|preprints=2
+|non_publisher=3
+|data_publications=2
+|software=2
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1908
+|subfields=[[Geophysics]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Geochemistry, Mineralogy and Crystallography
+|monographs=1
+|anthology_contributions=2
+|journal_articles=5
+|preprints=1
+|non_publisher=3
+|data_publications=1
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1906
+|subfields=[[Geochemistry and Petrology]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Geography
+|monographs=1
+|anthology_contributions=1
+|journal_articles=5
+|preprints=1
+|non_publisher=3
+|data_publications=2
+|software=2
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=1904,2308,2309,3305,3322
+|subfields=[[Earth-Surface Processes]], [[Management, Monitoring, Policy and Law]], [[Nature and Landscape Conservation]], [[Geography, Planning and Development]], [[Urban Studies]]
+}}
+{{DFG publication types
+|area=Natural Sciences
+|review_board=Water Research
+|monographs=1
+|anthology_contributions=1
+|journal_articles=5
+|preprints=1
+|non_publisher=2
+|data_publications=1
+|software=1
+|patents=1
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=2305,2310,2312
+|subfields=[[Environmental Engineering]], [[Pollution]], [[Water Science and Technology]]
+}}
+{{DFG publication types
+|area=Engineering Sciences
+|review_board=Production Technology
+|monographs=1
+|anthology_contributions=2
+|journal_articles=4
+|preprints=1
+|non_publisher=2
+|data_publications=1
+|software=1
+|patents=2
+|audio_visual=1
+|images_graphs=1
+|alternative=2
+|other=
+|subfield_ids=2209
+|subfields=[[Industrial and Manufacturing Engineering]]
+}}
+{{DFG publication types
+|area=Engineering Sciences
+|review_board=Mechanics and Constructive Mechanical Engineering
+|monographs=2
+|anthology_contributions=2
+|journal_articles=3
+|preprints=1
+|non_publisher=1
+|data_publications=2
+|software=2
+|patents=2
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=3
+|subfield_ids=2200,2203,2206,2210,2212
+|subfields=[[General Engineering]], [[Automotive Engineering]], [[Computational Mechanics]], [[Mechanical Engineering]], [[Ocean Engineering]]
+}}
+{{DFG publication types
+|area=Engineering Sciences
+|review_board=Process Engineering, Technical Chemistry
+|monographs=1
+|anthology_contributions=1
+|journal_articles=5
+|preprints=2
+|non_publisher=4
+|data_publications=4
+|software=4
+|patents=5
+|audio_visual=2
+|images_graphs=2
+|alternative=1
+|other=
+|subfield_ids=1502,1503,1504,1506,1508,2103,2311
+|subfields=[[Bioengineering]], [[Catalysis]], [[Chemical Health and Safety]], [[Filtration and Separation]], [[Process Chemistry and Technology]], [[Fuel Technology]], [[Waste Management and Disposal]]
+}}
+{{DFG publication types
+|area=Engineering Sciences
+|review_board=Heat Energy Technology, Thermal Machines, Fluid Mechanics
+|monographs=1
+|anthology_contributions=1
+|journal_articles=5
+|preprints=2
+|non_publisher=4
+|data_publications=4
+|software=4
+|patents=5
+|audio_visual=2
+|images_graphs=2
+|alternative=1
+|other=
+|subfield_ids=1507,2100,2102,2104,2105,2202
+|subfields=[[Fluid Flow and Transfer Processes]], [[General Energy]], [[Energy Engineering and Power Technology]], [[Nuclear Energy and Engineering]], [[Renewable Energy, Sustainability and the Environment]], [[Aerospace Engineering]]
+}}
+{{DFG publication types
+|area=Engineering Sciences
+|review_board=Materials Engineering
+|monographs=1
+|anthology_contributions=2
+|journal_articles=5
+|preprints=2
+|non_publisher=2
+|data_publications=2
+|software=2
+|patents=3
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=
+|subfield_ids=2211,2503,2506
+|subfields=[[Mechanics of Materials]], [[Ceramics and Composites]], [[Metals and Alloys]]
+}}
+{{DFG publication types
+|area=Engineering Sciences
+|review_board=Materials Science
+|monographs=1
+|anthology_contributions=2
+|journal_articles=5
+|preprints=3
+|non_publisher=1
+|data_publications=4
+|software=2
+|patents=2
+|audio_visual=1
+|images_graphs=1
+|alternative=1
+|other=4
+|subfield_ids=2500,2502,2504,2508
+|subfields=[[General Materials Science]], [[Biomaterials]], [[Electronic, Optical and Magnetic Materials]], [[Surfaces, Coatings and Films]]
+}}
+{{DFG publication types
+|area=Engineering Sciences
+|review_board=Systems Engineering
+|monographs=1
+|anthology_contributions=1
+|journal_articles=3
+|preprints=1
+|non_publisher=2
+|data_publications=2
+|software=2
+|patents=2
+|audio_visual=2
+|images_graphs=2
+|alternative=1
+|other=
+|subfield_ids=2204,2207,2213,3102,3105
+|subfields=[[Biomedical Engineering]], [[Control and Systems Engineering]], [[Safety, Risk, Reliability and Quality]], [[Acoustics and Ultrasonics]], [[Instrumentation]]
+}}
+{{DFG publication types
+|area=Engineering Sciences
+|review_board=Electrical Engineering and Information Technology
+|monographs=2
+|anthology_contributions=3
+|journal_articles=4
+|preprints=3
+|non_publisher=4
+|data_publications=3
+|software=3
+|patents=4
+|audio_visual=2
+|images_graphs=2
+|alternative=1
+|other=
+|subfield_ids=1711,2208,2214
+|subfields=[[Signal Processing]], [[Electrical and Electronic Engineering]], [[Media Technology]]
+}}
+{{DFG publication types
+|area=Engineering Sciences
+|review_board=Computer Science
+|monographs=1
+|anthology_contributions=1
+|journal_articles=2
+|preprints=4
+|non_publisher=5
+|data_publications=2
+|software=5
+|patents=1
+|audio_visual=4
+|images_graphs=4
+|alternative=1
+|other=
+|subfield_ids=1702,1703,1704,1705,1706,1707,1708,1709,1710,1712,2614
+|subfields=[[Artificial Intelligence]], [[Computational Theory and Mathematics]], [[Computer Graphics and Computer-Aided Design]], [[Computer Networks and Communications]], [[Computer Science Applications]], [[Computer Vision and Pattern Recognition]], [[Hardware and Architecture]], [[Human-Computer Interaction]], [[Information Systems]], [[Software]], [[Theoretical Computer Science]]
+}}
+{{DFG publication types
+|area=Engineering Sciences
+|review_board=Construction Engineering and Architecture
+|monographs=1
+|anthology_contributions=1
+|journal_articles=2
+|preprints=4
+|non_publisher=5
+|data_publications=2
+|software=5
+|patents=1
+|audio_visual=4
+|images_graphs=4
+|alternative=1
+|other=
+|subfield_ids=2205,2215,2216,3313
+|subfields=[[Civil and Structural Engineering]], [[Building and Construction]], [[Architecture]], [[Transportation]]
+}}
+|}
+
+== Source ==
+Deutsche Forschungsgemeinschaft (2022). ''Academic Publishing as a Foundation and Area of Leverage
+for Research Assessment. Challenges and Fields of Action.'' Position paper. Bonn: DFG.
+Appendix (section 6), Figure 3, p. 74.
+[https://www.dfg.de/resource/blob/175776/positionspapier-publikationswesen-en.pdf PDF]
+
+[[Category:Sources]]

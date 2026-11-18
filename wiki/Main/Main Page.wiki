@@ -1,0 +1,63 @@
+__NOTOC__
+<div style="font-size:115%; margin-bottom:1em;">
+'''Research Assessment Wiki''' collects, for every research topic, ''what is worth looking at'' when
+researchers in that topic are evaluated: the leading journals and conferences, the relevant awards,
+other important contributions, and a suggested weighting of these. The criteria are drafted
+automatically from open data and then reviewed and refined by experts of each field.
+</div>
+
+''Pilot phase: the pages currently contain only the topic classification. Criteria have not yet been
+reviewed by experts.''
+
+<div style="font-size:130%; text-align:center; margin:1em 0 0.5em 0;">
+'''→ [[OpenAlex topic hierarchy|Browse the four main areas and all topics]] ←'''
+</div>
+{| class="wikitable" style="text-align:center; width:100%; font-size:110%;"
+| style="width:25%;" | '''[[Physical Sciences]]'''<br/><small>physics, chemistry, engineering, computer science, mathematics…</small>
+| style="width:25%;" | '''[[Life Sciences]]'''<br/><small>biology, agriculture, neuroscience, immunology…</small>
+| style="width:25%;" | '''[[Health Sciences]]'''<br/><small>medicine, nursing, dentistry, health professions…</small>
+| style="width:25%;" | '''[[Social Sciences (domain)|Social Sciences]]'''<br/><small>social sciences, humanities, economics, psychology…</small>
+|}
+
+== Why ==
+Fields publish and evaluate differently. In computer science the top conferences matter as much as
+journals; in mathematics author order is alphabetical; in particle physics a paper can have a thousand
+authors. A single, field-independent number cannot capture this. Following the principles of
+[https://coara.eu CoARA] and [https://sfdora.org DORA], this wiki makes the field-specific criteria
+explicit, open and open to debate.
+
+== How it is organised ==
+* '''Classification:''' the ~4,500 topics of [https://openalex.org OpenAlex], grouped into
+  4 domains → 26 fields → 252 subfields → topics. Start at the '''[[OpenAlex topic hierarchy]]'''.
+* '''Inheritance:''' general criteria (awards, weights) are set at subfield level; a topic page only
+  records what differs, together with its own list of venues.
+* '''Venue levels:''' journals and conferences will be placed on a level scale, starting from
+  established national lists (the Finnish [https://julkaisufoorumi.fi Publication Forum] and the
+  [https://kanalregister.hkdir.no Norwegian Register]) and international conference rankings.
+* '''Structured data:''' every page is built from templates whose fields are stored in a database,
+  so the criteria can later be queried and turned into metrics.
+
+== How to contribute ==
+* Read the page of your topic or subfield and use its '''discussion''' tab to propose changes,
+  with a short justification.
+* Invited experts receive an account and can edit directly. Changes become visible after a
+  curator of the subfield approves them.
+* Disagreement is welcome: where experts disagree, the page shows the range of views rather than
+  forcing a single answer.
+
+== Magyarul röviden ==
+Az oldal minden OpenAlex-témakörre összegyűjti, mit érdemes figyelembe venni az adott terület
+kutatóinak értékelésénél: a meghatározó folyóiratokat és konferenciákat, a díjakat, az egyéb
+fontos hozzájárulásokat és ezek javasolt súlyozását. A vázlatok nyílt adatokból, automatikusan
+készülnek, és a terület szakértői véleményezik és pontosítják őket.
+
+== Contents ==
+{{#cargo_query:tables=Topics
+|fields=COUNT(*)=Topics
+|format=table
+}}
+
+----
+<small>Content: [https://creativecommons.org/licenses/by/4.0/ CC BY 4.0]. Classification data:
+OpenAlex (CC0). Source code and data pipeline:
+[https://github.com/jtapolcai/research-assessment-wiki GitHub].</small>

@@ -75,5 +75,16 @@ Everything outside the markers belongs to the curators.
 
 '''Keywords:''' {{{keywords|}}}
 
+== Publication types (DFG survey) ==
+''Inherited from the subfield [[{{{subfield}}}]].''
+{{#cargo_query:tables=DFGPublicationTypes
+|fields=review_board=board,area=area,monographs=mono,anthology_contributions=anthology,journal_articles=journal,preprints=preprints,non_publisher=nonpub,data_publications=data,software=software,patents=patents,audio_visual=av,images_graphs=images,alternative=alt,other=other
+|where=subfield_ids HOLDS '{{{subfield_id}}}'
+|format=template
+|template=DFG profile
+|named args=yes
+|default=''No DFG review board is assigned to this subfield.''
+}}
+
 ''Source: [https://openalex.org OpenAlex] (CC0). Review status: not yet reviewed by experts.''
 [[Category:Topics]]</includeonly>

@@ -1,0 +1,8 @@
+<noinclude>Table cell for one value of the DFG publication-type survey (1–5). Use as <code>| {{DFG level|4}}</code>.</noinclude><includeonly>{{#switch:{{{1|}}}
+|5=style="background:#1b7f3b; color:#fff; text-align:center;" {{!}} Very high (5)
+|4=style="background:#7cc47f; text-align:center;" {{!}} High (4)
+|3=style="background:#fff3a6; text-align:center;" {{!}} Medium (3)
+|2=style="background:#fffbe0; text-align:center;" {{!}} Low (2)
+|1=style="text-align:center;" {{!}} Minimal (1)
+|#default=style="text-align:center; color:#888;" {{!}} –
+}}</includeonly>

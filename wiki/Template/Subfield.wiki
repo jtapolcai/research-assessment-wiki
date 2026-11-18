@@ -75,5 +75,15 @@ between the <code>BOT:BEGIN openalex</code> and <code>BOT:END openalex</code> ma
 |default=''No topics stored yet.''
 }}
 
+== Publication types (DFG survey) ==
+{{#cargo_query:tables=DFGPublicationTypes
+|fields=review_board=board,area=area,monographs=mono,anthology_contributions=anthology,journal_articles=journal,preprints=preprints,non_publisher=nonpub,data_publications=data,software=software,patents=patents,audio_visual=av,images_graphs=images,alternative=alt,other=other
+|where=subfield_ids HOLDS '{{{openalex_id}}}'
+|format=template
+|template=DFG profile
+|named args=yes
+|default=''No DFG review board is assigned to this subfield.''
+}}
+
 ''Source: [https://openalex.org OpenAlex] (CC0).''
 [[Category:Subfields]]</includeonly>
