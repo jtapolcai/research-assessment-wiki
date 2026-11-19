@@ -1,0 +1,11 @@
+<noinclude>
+Explanatory note under the venue table of a topic page.
+</noinclude><includeonly><small>Venues (journals, conference proceedings, book series) where the topic's works
+were published in {{{years}}}, as classified by [https://openalex.org OpenAlex] (CC0); repositories
+such as arXiv are left out. Share = the venue's part of the topic's {{formatnum:{{{total}}}}} works in
+these venues. A venue is listed if it reaches at least {{{min_share}}} % (at most {{{max}}} venues).
+Norwegian level: the venue's level for 2026 in the Norwegian Register for Scientific Journals, Series
+and Publishers ([https://kanalregister.hkdir.no HK-dir], CC BY 4.0): 2 = leading, 1 = scientific,
+0 = not approved as scientific, – = not listed or not matched by ISSN.
+The list shows where the field publishes, not how good a venue is; the levels to be used for
+evaluation are proposed and reviewed separately.</small></includeonly>

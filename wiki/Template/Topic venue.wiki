@@ -1,0 +1,31 @@
+<noinclude>
+One row of a topic's venue table. Written by the upload bot between the
+<code>BOT:BEGIN venues</code> and <code>BOT:END venues</code> markers of a topic page
+(see <code>scripts/upload_topic_venues.py</code>); edits there are overwritten.
+
+{{#cargo_declare:_table=TopicVenues
+|topic_id=String
+|rank=Integer
+|source_id=String
+|venue=String
+|venue_type=String
+|share=Float
+|works=Integer
+|norway_level=String
+}}
+</noinclude><includeonly>{{#cargo_store:_table=TopicVenues
+|topic_id={{{topic_id|}}}
+|rank={{{rank|}}}
+|source_id={{{source|}}}
+|venue={{{name|}}}
+|venue_type={{{type|}}}
+|share={{{share|}}}
+|works={{{works|}}}
+|norway_level={{{norway|}}}
+}}
+{{!}}-
+{{!}} {{{rank}}}
+{{!}} [https://openalex.org/{{{source}}} {{{name}}}]
+{{!}} {{{type|}}}
+{{!}} style="text-align:right" {{!}} {{{share}}}
+{{!}} style="text-align:center" {{!}} {{#if:{{{norway|}}}|{{{norway}}}|–}}</includeonly>

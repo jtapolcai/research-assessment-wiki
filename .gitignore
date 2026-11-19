@@ -231,3 +231,6 @@ secrets/
 
 # Raw API downloads (regenerable); the cleaned snapshot in data/ is committed
 data/raw/
+
+# Large regenerable OpenAlex download (scripts/fetch_topic_venues.py)
+data/topic_venues.jsonl

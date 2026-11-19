@@ -27,11 +27,18 @@ fi
 
 echo "Tunnel: http://localhost:$LOCAL_PORT/api.php -> $SSH_USER@$SSH_HOST:$SSH_PORT (wiki port 80)"
 echo "Leave this window open while uploading. Ctrl+C closes the tunnel."
+echo "If the connection drops, it is reopened after 5 seconds."
 
-exec ssh -N \
-  -o ExitOnForwardFailure=yes \
-  -o ServerAliveInterval=30 \
-  -o ServerAliveCountMax=3 \
-  -p "$SSH_PORT" \
-  -L "$LOCAL_PORT:localhost:80" \
-  "$SSH_USER@$SSH_HOST"
+trap 'exit 0' INT TERM
+while true; do
+  ssh -N \
+    -o ExitOnForwardFailure=yes \
+    -o ServerAliveInterval=15 \
+    -o ServerAliveCountMax=3 \
+    -o ConnectTimeout=15 \
+    -p "$SSH_PORT" \
+    -L "$LOCAL_PORT:localhost:80" \
+    "$SSH_USER@$SSH_HOST" || true
+  echo "$(date '+%H:%M:%S') tunnel closed, reconnecting in 5 s" >&2
+  sleep 5
+done

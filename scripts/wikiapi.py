@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import http.client
 import http.cookiejar
 import json
 import os
@@ -41,7 +42,7 @@ class Wiki:
         self._credentials: tuple[str, str] | None = None
 
     # -- low level -----------------------------------------------------------
-    def _call(self, params: dict, post: bool = False, retries: int = 6) -> dict:
+    def _call(self, params: dict, post: bool = False, retries: int = 8) -> dict:
         params = {**params, "format": "json", "formatversion": "2"}
         data = urllib.parse.urlencode(params).encode() if post else None
         url = self.api_url if post else f"{self.api_url}?{urllib.parse.urlencode(params)}"
@@ -50,7 +51,7 @@ class Wiki:
             try:
                 with self.opener.open(request, timeout=120) as response:
                     result = json.load(response)
-            except (urllib.error.URLError, TimeoutError) as error:
+            except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.HTTPException) as error:
                 if attempt == retries - 1:
                     raise WikiError(f"cannot reach {self.api_url}: {error}") from error
                 time.sleep(2 ** attempt)

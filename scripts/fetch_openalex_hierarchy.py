@@ -47,7 +47,7 @@ def get_json(url: str, retries: int = 5) -> dict:
                 continue
             body = error.read().decode("utf-8", "replace")[:500]
             raise SystemExit(f"HTTP {error.code} for {url}\n{body}") from error
-        except urllib.error.URLError:
+        except (urllib.error.URLError, TimeoutError, ConnectionError):
             if attempt < retries - 1:
                 time.sleep(2 ** attempt)
                 continue
