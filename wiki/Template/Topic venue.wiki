@@ -13,6 +13,7 @@ One row of a topic's venue table. Written by the upload bot between the
 |works=Integer
 |norway_level=String
 |core_rank=String
+|core_id=String
 |core_edition=String
 |level=Integer
 }}
@@ -26,6 +27,7 @@ One row of a topic's venue table. Written by the upload bot between the
 |works={{{works|}}}
 |norway_level={{{norway|}}}
 |core_rank={{{core|}}}
+|core_id={{{core_id|}}}
 |core_edition={{{core_edition|}}}
 |level={{{level|}}}
 }}
@@ -34,4 +36,4 @@ One row of a topic's venue table. Written by the upload bot between the
 {{!}} [https://openalex.org/{{{source}}} {{{name}}}]
 {{!}} {{{type|}}}
 {{!}} style="text-align:right" {{!}} {{{share}}}
-{{!}} data-sort-value="{{#if:{{{level|}}}|{{{level}}}|-1}}" {{!}} {{#if:{{{level|}}}|'''{{{level}}}''' (}}{{#if:{{{norway|}}}{{{core|}}}|{{#if:{{{norway|}}}|Norway&nbsp;{{{norway}}}}}{{#if:{{{norway|}}}|{{#if:{{{core|}}}|,&#32;}}}}{{#if:{{{core|}}}|CORE&nbsp;{{{core}}}{{#if:{{{core_year|}}}|&nbsp;({{{core_year}}})}}}}|–}}{{#if:{{{level|}}}|)}}</includeonly>
+{{!}} data-sort-value="{{#if:{{{level|}}}|{{{level}}}|-1}}" {{!}} {{#if:{{{level|}}}|'''{{{level}}}''' (}}{{#if:{{{norway|}}}{{{core|}}}|{{#if:{{{norway|}}}|Norway&nbsp;{{{norway}}}}}{{#if:{{{norway|}}}|{{#if:{{{core|}}}|,&#32;}}}}{{#if:{{{core|}}}|{{#if:{{{core_id|}}}|[https://portal.core.edu.au/conf-ranks/{{{core_id}}}/ CORE&nbsp;{{{core}}}]|CORE&nbsp;{{{core}}}}}{{#if:{{{core_year|}}}|&nbsp;({{{core_year}}})}}}}|–}}{{#if:{{{level|}}}|)}}</includeonly>

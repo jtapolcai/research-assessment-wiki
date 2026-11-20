@@ -71,7 +71,7 @@ def core_params(row: dict | None) -> str:
     if not row:
         return ""
     year = re.sub(r"\D", "", row["core_edition"])
-    return f"|core={row['core_rank']}|core_edition={row['core_edition']}" + (f"|core_year={year}" if year != "2026" else "")
+    return f"|core={row['core_rank']}|core_id={row['core_id']}|core_edition={row['core_edition']}" + (f"|core_year={year}" if year != "2026" else "")
 
 
 def dfg_conference_weight() -> dict[str, int]:
