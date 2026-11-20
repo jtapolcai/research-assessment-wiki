@@ -33,3 +33,57 @@ core_id,core_acronym,openalex_id,note
 1244,MODELS,S4306420546,conference source
 971,ER,S4306419444,conference source
 76,MSWIM,S7407087959,conference source
+1209,ICSE,S4220650826,Proceedings of the International Conference on Software Engineering
+957,SiggraphA,S7407088278,SIGGRAPH Asia Conference Papers
+922,AAMAS,S4306417597,Adaptive Agents and Multi-Agents Systems (AAMAS proceedings)
+1240,ALIFE,S4363608301,Conference on Artificial Life (ALIFE)
+807,Interact,S7407114746,conference source
+1131,Mobiquitous,S7407088684,conference source
+1638,NOSSDAV,S7407089337,conference source
+674,IEEE SSE,S7407086850,conference source
+1197,SSDBM,S4210224189,conference source
+427,DIGRA,S4306418196,conference source
+478,ECSCW,S4306418316,conference source
+44,ICMR,S4306419706,conference source
+78,PADS,S4210232727,conference source
+1185,QRS,S4363608552,conference source
+1757,VCIP,S4363608486,conference source
+724,PacificVis,S7407087194,conference source
+1997,DAFX,S7407113864,conference source
+813,CNSM,S7407087464,conference source
+1237,Petri Nets,S4306417692,conference source
+814,IFSA,S4306420410,Joint IFSA World Congress and NAFIPS
+814,IFSA,S7407097159,Joint IFSA World Congress
+1184,Qshine,S7407087134,conference source
+1729,SIGdial,S4306417680,conference source
+23,ACE,S7407087545,conference source
+461,EGVE,S7407113512,conference source
+579,HCW,S7407088555,conference source
+1206,ICSoft,S7407088382,conference source
+899,MOMM,S7407087518,conference source
+851,acmIDC,S7407086946,conference source
+2313,ACM_WiSec,S7407088581,conference source
+162,ASPDAC,S4363608791,conference source
+240,IES,S7407114313,conference source
+380,CSEET,S4210194198,conference source
+735,IEEE CIMSIVP,S7407106410,conference source
+736,IEEE CISDA,S7407086200,conference source
+738,IEEE CICA,S7407106358,conference source
+739,IEEE CICS,S7407106393,conference source
+749,RSP,S4210222258,conference source
+756,Tencon,S4363607986,conference source
+901,ACII,S4393918207,conference source
+837,I4CS,S7407113326,conference source
+1218,IWSM Mensura,S7407087045,conference source
+1385,ISGC,S7407105325,conference source
+1402,ISNN,S4306420181,conference source
+1472,HealthCom,S7407089046,conference source
+1540,VizSec,S4393918969,conference source
+1653,Onward,S7407087749,conference source
+1692,MPLR,S7407105070,conference source
+1775,SACMAT,S7407087914,conference source
+2346,C&C,S4306418137,conference source
+2328,WFCS,S7407087002,conference source
+2338,MM_Asia,S7407087938,conference source
+2317,ISCAS,S4393914142,conference source
+2088,LANMAN,S7407086497,conference source

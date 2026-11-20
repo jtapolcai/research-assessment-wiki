@@ -7,8 +7,7 @@ these venues. A venue is listed if it reaches at least {{{min_share}}} % (at mos
 Rankings: '''Norway''' = level for 2026 in the Norwegian Register for Scientific Journals, Series and
 Publishers ([https://kanalregister.hkdir.no HK-dir], CC BY 4.0): 2 = leading, 1 = scientific,
 0 = not approved as scientific. '''CORE''' = conference rank (A*, A, B, C) in the
-[https://portal.core.edu.au/conf-ranks/ ICORE/CORE Conference Portal], latest edition (year shown if
-older than 2026); linked to OpenAlex by name and acronym, see [[Conference rankings]].
+[https://portal.core.edu.au/conf-ranks/ ICORE/CORE Conference Portal], ICORE 2026 edition; linked to OpenAlex by name and acronym, see [[Conference rankings]].
 The number in bold is a combined level on our 0–3 scale, used for sorting: the higher of the Norwegian
 level and the CORE rank converted as A* = 3, A = 2, B = 1, C = 0, minus (5 − the weight of conference
 proceedings in the field's [[DFG publication type survey (2018)|DFG profile]]){{#if:{{{dfg|}}}|&#32;(here {{{dfg}}}, so

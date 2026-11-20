@@ -12,9 +12,10 @@ is matched to OpenAlex sources by <code>scripts/match_core_openalex.py</code>:
 # the same acronym in the OpenAlex name, with at least two thirds of the significant words shared;
 # nearly the same significant words.
 Workshops, companion volumes and extended-abstract series do not inherit the rank of the main conference.
-The latest rank is used; if the latest edition that lists the conference is older than ICORE 2026, its year is shown.
+Ranks are those of the ICORE 2026 edition; conferences not ranked A*, A, B or C in 2026 get no CORE rank here.
 
 == Limitations ==
+* Coverage: of the 797 conferences ranked A*–C in ICORE 2026, about 660 are linked to an OpenAlex source.
 * Many papers of ranked conferences appear in OpenAlex only under a book series such as ''Lecture Notes in Computer
   Science'', which cannot be assigned to a single conference. Their rank is therefore not visible here.
 * Matching by name can miss or mismatch a conference. Please report or correct errors on the talk page of this article.

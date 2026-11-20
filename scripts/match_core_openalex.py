@@ -9,7 +9,8 @@ Inputs
 Cache
   data/raw/venues/openalex_conferences.json   all OpenAlex sources of type 'conference' (~20,000; ~100 requests)
 Output
-  data/core_openalex.csv              one row per matched OpenAlex source: CORE id, acronym, latest rank, edition, how matched
+  data/core_openalex.csv              one row per matched OpenAlex source: CORE id, acronym, ICORE2026 rank, how matched
+                                      (conferences without an ICORE2026 rank A*, A, B or C are left out)
 
 Matching (in this order; a source keeps its first match):
   0. the manual list
@@ -50,6 +51,17 @@ def words(text: str) -> list[str]:
 
 def norm(text: str) -> str:
     return " ".join(w for w in words(text) if w not in STOP)
+
+
+EDITION = "ICORE2026"  # the ranks used on the wiki
+
+
+def rank_in(years_listed: str, edition: str = EDITION) -> str:
+    for item in years_listed.split(","):
+        name, _, rank = item.strip().partition("_")
+        if name == edition:
+            return rank
+    return ""
 
 
 def latest_rank(years_listed: str) -> tuple[str, str]:
@@ -114,7 +126,7 @@ def main() -> None:
         own = re.findall(r"\(([A-Z][A-Za-z0-9-]{1,15})\)", sources[sid]["name"])
         if how not in ("acronym", "manual") and own and not set(own) & {a.strip() for a in row["Acronym"].split(";")}:
             return  # OpenAlex names a different acronym
-        edition, rank = latest_rank(row["YearsListed"])
+        edition, rank = EDITION, rank_in(row["YearsListed"])
         if rank not in ("A*", "A", "B", "C"):
             return
         matches[sid] = {"openalex_id": sid, "openalex_name": sources[sid]["name"], "core_id": row["ID"],
