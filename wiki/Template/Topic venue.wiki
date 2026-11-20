@@ -12,6 +12,9 @@ One row of a topic's venue table. Written by the upload bot between the
 |share=Float
 |works=Integer
 |norway_level=String
+|core_rank=String
+|core_edition=String
+|level=Integer
 }}
 </noinclude><includeonly>{{#cargo_store:_table=TopicVenues
 |topic_id={{{topic_id|}}}
@@ -22,10 +25,13 @@ One row of a topic's venue table. Written by the upload bot between the
 |share={{{share|}}}
 |works={{{works|}}}
 |norway_level={{{norway|}}}
+|core_rank={{{core|}}}
+|core_edition={{{core_edition|}}}
+|level={{{level|}}}
 }}
 {{!}}-
 {{!}} {{{rank}}}
 {{!}} [https://openalex.org/{{{source}}} {{{name}}}]
 {{!}} {{{type|}}}
 {{!}} style="text-align:right" {{!}} {{{share}}}
-{{!}} style="text-align:center" {{!}} {{#if:{{{norway|}}}|{{{norway}}}|–}}</includeonly>
+{{!}} data-sort-value="{{#if:{{{level|}}}|{{{level}}}|-1}}" {{!}} {{#if:{{{level|}}}|'''{{{level}}}''' (}}{{#if:{{{norway|}}}{{{core|}}}|{{#if:{{{norway|}}}|Norway&nbsp;{{{norway}}}}}{{#if:{{{norway|}}}|{{#if:{{{core|}}}|,&#32;}}}}{{#if:{{{core|}}}|CORE&nbsp;{{{core}}}{{#if:{{{core_year|}}}|&nbsp;({{{core_year}}})}}}}|–}}{{#if:{{{level|}}}|)}}</includeonly>

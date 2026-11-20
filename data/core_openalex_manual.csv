@@ -1,0 +1,35 @@
+core_id,core_acronym,openalex_id,note
+98,NeurIPS,S4363606243,conference source
+1629,AAAI,S4210191458,proceedings typed as journal in OpenAlex
+56,SIGMOD,S4393915683,conference source
+56,SIGMOD,S4387289859,Proceedings of the ACM on Management of Data (SIGMOD papers since 2023)
+1261,VLDB,S4210226185,Proceedings of the VLDB Endowment
+52,FSE,S4363608883,ESEC/FSE conference source
+52,FSE,S4404663975,Proceedings of the ACM on Software Engineering (FSE papers since 2024)
+479,ECCV,S4306418318,conference source
+1894,CHES,S4210207404,IACR TCHES (CHES papers since 2018)
+27,MOBICOM,S4363608994,conference source
+494,Interspeech,S4393918409,conference source
+688,IPDPS,S4210174069,conference source
+1442,PETS,S4210183172,Proceedings on Privacy Enhancing Technologies
+1442,PETS,S4306420736,conference source
+2169,ICWSM,S4387284482,Proceedings of the International AAAI Conference on Web and Social Media
+2169,ICWSM,S4363608822,conference source
+55,SIGCSE,S4363608709,conference source
+1259,UMAP,S7407087750,conference source
+1259,UMAP,S4306419905,conference source
+2185,EuroS&P,S4306418620,conference source
+533,FC,S4306418423,conference source
+1408,RAID,S4306420779,conference source
+1727,SDM,S4306420871,conference source
+1181,ICPC,S7407088527,conference source
+1181,ICPC,S4306419777,conference source
+791,ICSA,S7407089048,conference source
+61,AsiaCCS,S4363609011,conference source
+599,CSF,S4210181444,Computer Security Foundations (formerly Workshop)
+1374,DISC,S4306420128,conference source
+1244,MODELS,S4363608391,conference source
+1244,MODELS,S7407088064,conference source
+1244,MODELS,S4306420546,conference source
+971,ER,S4306419444,conference source
+76,MSWIM,S7407087959,conference source

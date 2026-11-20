@@ -4,11 +4,12 @@
 Reads   data/topic_venues.jsonl                 (from fetch_topic_venues.py)
         data/openalex_hierarchy.json            (topic page titles)
         data/raw/venues/venue_openalex.csv      (Norwegian level per OpenAlex source; optional)
+        data/core_openalex.csv                  (CORE conference rank per OpenAlex source; optional)
         data/openalex_sources.json              (source types; fetched here and cached, CC0)
 
 The table is written between <!-- BOT:BEGIN venues --> and <!-- BOT:END venues -->, right after
-the OpenAlex block; the rest of the page is kept. Only the Norwegian level (CC BY 4.0) is
-published; the combined JUFO-based level stays local until the JUFO licence is clarified.
+the OpenAlex block; the rest of the page is kept. The "Rankings" column lists the Norwegian
+level (CC BY 4.0) and the CORE rank; the combined JUFO-based level stays local until the JUFO licence is clarified.
 
 Examples
   scripts/upload_topic_venues.py --dry-run out/ --limit 5
@@ -37,6 +38,10 @@ VENUES = ROOT / "data" / "topic_venues.jsonl"
 HIERARCHY = ROOT / "data" / "openalex_hierarchy.json"
 LEVELS_CSV = ROOT / "data" / "raw" / "venues" / "venue_openalex.csv"
 SOURCES = ROOT / "data" / "openalex_sources.json"
+CORE = ROOT / "data" / "core_openalex.csv"
+DFG_TYPES = ROOT / "data" / "dfg_publication_types_2018.csv"
+DFG_BOARDS = ROOT / "data" / "dfg_board_subfields.csv"
+CORE_POINTS = {"A*": 3, "A": 2, "B": 1, "C": 0}
 BEGIN, END = "<!-- BOT:BEGIN venues -->", "<!-- BOT:END venues -->"
 BLOCK_RE = re.compile(re.escape(BEGIN) + r".*?" + re.escape(END), re.DOTALL)
 YEARS = "2015–2025"
@@ -53,6 +58,36 @@ def norway_levels() -> dict[str, str]:
             if row["openalex_id"] and row["norway_level"] != "":
                 levels.setdefault(row["openalex_id"], row["norway_level"])
     return levels
+
+
+def core_ranks() -> dict[str, dict]:
+    if not CORE.exists():
+        return {}
+    with CORE.open(newline="", encoding="utf-8") as f:
+        return {row["openalex_id"]: row for row in csv.DictReader(f)}
+
+
+def core_params(row: dict | None) -> str:
+    if not row:
+        return ""
+    year = re.sub(r"\D", "", row["core_edition"])
+    return f"|core={row['core_rank']}|core_edition={row['core_edition']}" + (f"|core_year={year}" if year != "2026" else "")
+
+
+def dfg_conference_weight() -> dict[str, int]:
+    """subfield id -> DFG weight (1-5) of non-publisher publications such as conference proceedings."""
+    with DFG_TYPES.open(newline="", encoding="utf-8") as f:
+        weight = {r["review_board"]: int(r["non_publisher"]) for r in csv.DictReader(f) if r["non_publisher"]}
+    with DFG_BOARDS.open(newline="", encoding="utf-8") as f:
+        return {r["subfield_id"]: weight[r["review_board"]] for r in csv.DictReader(f) if r["review_board"] in weight}
+
+
+def combined_level(norway: str, core: dict | None, dfg: int | None) -> str:
+    """Provisional 0-3 level: max of the Norwegian level and the DFG-adjusted CORE rank."""
+    scores = [int(norway)] if norway in ("0", "1", "2") else []
+    if core and dfg:
+        scores.append(max(0, CORE_POINTS[core["core_rank"]] - (5 - dfg)))
+    return str(max(scores)) if scores else ""
 
 
 def source_types(ids: set[str]) -> dict[str, str]:
@@ -87,19 +122,21 @@ def selected(record: dict) -> list[tuple[int, list, float]]:
     return rows
 
 
-def venue_block(record: dict, types: dict, norway: dict) -> str:
+def venue_block(record: dict, types: dict, norway: dict, core: dict, dfg: int | None) -> str:
     if not selected(record):
         return "\n".join([BEGIN, "== Leading venues ==",
                           f"''OpenAlex lists no journal, proceedings or book-series works for this topic "
                           f"in {YEARS}.''", END])
     lines = [BEGIN, "== Leading venues ==", '{| class="wikitable sortable"',
-             "! # !! Venue !! Type !! Share of the topic's works (%) !! Norwegian level"]
+             "! # !! Venue !! Type !! Share of the topic's works (%) !! Rankings"]
     for rank, (source, name, works), share in selected(record):
         lines.append(
             f"{{{{Topic venue|topic_id={record['topic']}|rank={rank}|source={source}|name={clean(name)}"
-            f"|type={types.get(source, '')}|share={share:.1f}|works={works}|norway={norway.get(source, '')}}}}}")
+            f"|type={types.get(source, '')}|share={share:.1f}|works={works}|norway={norway.get(source, '')}"
+            + core_params(core.get(source))
+            + f"|level={combined_level(norway.get(source, ''), core.get(source), dfg)}}}}}")
     lines += ["|}", f"{{{{Topic venues note|years={YEARS}|total={record['total']}"
-                    f"|min_share={MIN_SHARE}|max={MAX_VENUES}}}}}", END]
+                    f"|min_share={MIN_SHARE}|max={MAX_VENUES}|dfg={dfg or ''}}}}}", END]
     return "\n".join(lines)
 
 
@@ -128,7 +165,9 @@ def main() -> None:
     records = records[: args.limit]
     types = source_types({v[0] for r in records for _, v, _ in selected(r)})
     norway = norway_levels()
-    blocks = {titles[("topics", r["topic"])]: venue_block(r, types, norway) for r in records}
+    core = core_ranks()
+    dfg = dfg_conference_weight()
+    blocks = {titles[("topics", r["topic"])]: venue_block(r, types, norway, core, dfg.get(subfield_of.get(r["topic"]))) for r in records}
     print(f"{len(blocks)} topic pages prepared", file=sys.stderr)
 
     if args.dry_run:

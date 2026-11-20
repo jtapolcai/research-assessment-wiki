@@ -1,0 +1,23 @@
+'''Conference rankings''' on this wiki come from the [https://portal.core.edu.au/conf-ranks/ ICORE/CORE Conference Portal],
+the most widely used ranking of computing conferences (ranks A*, A, B, C). They appear in the "Rankings" column of the
+''Leading venues'' table on each topic page, next to the level from the Norwegian register.
+
+== How the ranks are linked to OpenAlex ==
+The CORE list (as kept in [https://github.com/jtapolcai/corePaperList corePaperList], <code>inputs/core_table.csv</code>)
+is matched to OpenAlex sources by <code>scripts/match_core_openalex.py</code>:
+# a hand-made list for conferences whose proceedings appear in OpenAlex as a journal or under another name
+#: (e.g. AAAI → ''Proceedings of the AAAI Conference on Artificial Intelligence'', VLDB → ''Proceedings of the VLDB Endowment'',
+#: SIGMOD → ''Proceedings of the ACM on Management of Data'');
+# the same conference name (ignoring words such as "International", "Proceedings", "IEEE", "ACM" and years);
+# the same acronym in the OpenAlex name, with at least two thirds of the significant words shared;
+# nearly the same significant words.
+Workshops, companion volumes and extended-abstract series do not inherit the rank of the main conference.
+The latest rank is used; if the latest edition that lists the conference is older than ICORE 2026, its year is shown.
+
+== Limitations ==
+* Many papers of ranked conferences appear in OpenAlex only under a book series such as ''Lecture Notes in Computer
+  Science'', which cannot be assigned to a single conference. Their rank is therefore not visible here.
+* Matching by name can miss or mismatch a conference. Please report or correct errors on the talk page of this article.
+* Ranks are shown for information; how they enter the evaluation criteria of a topic is decided by the experts of that topic.
+
+[[Category:Sources]]

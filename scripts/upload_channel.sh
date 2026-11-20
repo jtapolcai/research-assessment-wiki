@@ -27,10 +27,12 @@ fi
 
 echo "Tunnel: http://localhost:$LOCAL_PORT/api.php -> $SSH_USER@$SSH_HOST:$SSH_PORT (wiki port 80)"
 echo "Leave this window open while uploading. Ctrl+C closes the tunnel."
-echo "If the connection drops, it is reopened after 5 seconds."
+echo "If the connection drops, it is reopened (waiting 10 s, doubling up to 5 min between attempts)."
 
 trap 'exit 0' INT TERM
+wait_s=10
 while true; do
+  started=$(date +%s)
   ssh -N \
     -o ExitOnForwardFailure=yes \
     -o ServerAliveInterval=15 \
@@ -39,6 +41,9 @@ while true; do
     -p "$SSH_PORT" \
     -L "$LOCAL_PORT:localhost:80" \
     "$SSH_USER@$SSH_HOST" || true
-  echo "$(date '+%H:%M:%S') tunnel closed, reconnecting in 5 s" >&2
-  sleep 5
+  # A tunnel that stayed up for a while resets the back-off; quick failures double it, so the
+  # server (e.g. fail2ban) is not hammered with login attempts.
+  if (( $(date +%s) - started > 300 )); then wait_s=10; else wait_s=$(( wait_s * 2 > 300 ? 300 : wait_s * 2 )); fi
+  echo "$(date '+%H:%M:%S') tunnel closed, reconnecting in $wait_s s" >&2
+  sleep "$wait_s"
 done

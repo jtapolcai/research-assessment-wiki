@@ -4,8 +4,16 @@ Explanatory note under the venue table of a topic page.
 were published in {{{years}}}, as classified by [https://openalex.org OpenAlex] (CC0); repositories
 such as arXiv are left out. Share = the venue's part of the topic's {{formatnum:{{{total}}}}} works in
 these venues. A venue is listed if it reaches at least {{{min_share}}} % (at most {{{max}}} venues).
-Norwegian level: the venue's level for 2026 in the Norwegian Register for Scientific Journals, Series
-and Publishers ([https://kanalregister.hkdir.no HK-dir], CC BY 4.0): 2 = leading, 1 = scientific,
-0 = not approved as scientific, – = not listed or not matched by ISSN.
+Rankings: '''Norway''' = level for 2026 in the Norwegian Register for Scientific Journals, Series and
+Publishers ([https://kanalregister.hkdir.no HK-dir], CC BY 4.0): 2 = leading, 1 = scientific,
+0 = not approved as scientific. '''CORE''' = conference rank (A*, A, B, C) in the
+[https://portal.core.edu.au/conf-ranks/ ICORE/CORE Conference Portal], latest edition (year shown if
+older than 2026); linked to OpenAlex by name and acronym, see [[Conference rankings]].
+The number in bold is a combined level on our 0–3 scale, used for sorting: the higher of the Norwegian
+level and the CORE rank converted as A* = 3, A = 2, B = 1, C = 0, minus (5 − the weight of conference
+proceedings in the field's [[DFG publication type survey (2018)|DFG profile]]){{#if:{{{dfg|}}}|&#32;(here {{{dfg}}}, so
+{{#switch:{{{dfg}}}|5=A* = 3, A = 2, B = 1, C = 0|4=A* = 2, A = 1, B and C = 0|3=A* = 1, others = 0|#default=CORE ranks add nothing}})}}.
+This is a provisional heuristic for experts to revise.
+– = not listed or not matched.
 The list shows where the field publishes, not how good a venue is; the levels to be used for
 evaluation are proposed and reviewed separately.</small></includeonly>
